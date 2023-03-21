@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Responsive Dropdown Menu</title>
+</head>
+<body>
+
+   <div class="menu" id="Menu">
+     <div class="drop-down">
+     <a href="#">home</a>
+     <div class="sub-menu">
+         <a href="#">link 1</a>
+         <a href="#">link 2</a>
+         <a href="#">link 3</a>
+     </div>
+    </div>
+    <div class="drop-down2">
+     <a href="#">about</a>
+      <div class="sub-menu2">
+         <a href="#">link 4</a>
+         <a href="#">link 5</a>
+         <a href="#">link 6</a>
+         <a href="#">link 7</a>
+         <a href="#">link 8</a>
+      </div>
+    </div>
+     <a href="./demo3.html">services</a>
+     <a href="./demo2.html">project</a>
+     <a href="./index.html">contact</a>
+    </div>
+ 
+
+ 
+ <!-- mobile menu  -->
+ 
+  <div class="mob-parent">
+    <div class="mob-menu" id="mobMenu">
+          <span class="closebtn" onclick="myHidden()">&times;</span>
+          <div class="drop-down" style="position: relative;width: 100%;">
+          <a href="#">Home</a>
+          <span class="arrow-down" onclick="openSubMenu(this)"></span>
+          <div class="msub-menu">
+              <a href="#" onclick="myHidden()">Link 1</a>
+              <a href="#" onclick="myHidden()">Link 2</a>
+              <a href="#" onclick="myHidden()">Link 3</a>
+          </div>
+         </div>
+         <div class="drop-down2" style="position: relative;width: 100%;">
+          <a href="#">About</a>
+          <span class="arrow-down2" onclick="openSubMenu2(this)"></span>
+          <div class="msub-menu2">
+              <a href="#" onclick="myHidden()">Link 4</a>
+              <a href="#" onclick="myHidden()">Link 5</a>
+              <a href="#" onclick="myHidden()">Link 6</a>
+          </div>
+       </div>
+         
+          <a href="./demo3.html" onclick="myHidden()">Services</a>
+          <a href="./demo2.html" onclick="myHidden()">Project</a>
+          <a href="./index.html" onclick="myHidden()">Contact</a>
+         </div>
+      
+         <span class="sm-bar" onclick="openNav()">&#9776;</span>
+  </div>
+
+   <script src="./script.js"></script>
+
+</body>
+</html>

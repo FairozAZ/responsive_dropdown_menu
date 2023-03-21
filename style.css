@@ -1,0 +1,224 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(5, 0, 6);
+    transition: 0.4s;
+    z-index: 10;
+}
+
+
+ .menu a
+{
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ .menu a:hover 
+{
+    background-color: #3d3c3c;
+}
+
+.drop-down, .drop-down2
+{
+    position: relative;
+}
+
+.sub-menu, .sub-menu2
+{
+    position: absolute;
+    width: 150px;
+    top: 45px;
+    left: -30px;
+    height: 0;
+    display: flex;
+    opacity: 0;
+    transition: all .8s;
+    visibility: hidden;
+    overflow:hidden;
+    flex-direction: column;
+    z-index: 5;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(5, 0, 6);
+}
+
+.sub-menu2{left: -22px;}
+
+.sub-menu a, .sub-menu2 a 
+{
+    font-size: 20px;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+.sub-menu a:not(:last-child), .sub-menu2 a:not(:last-child)
+{
+ border-bottom: 1px solid rgb(95, 89, 89);
+}
+
+.drop-down:hover .sub-menu
+{
+    visibility: visible;
+    opacity: 1;
+    height: 165px;
+}
+
+.drop-down2:hover .sub-menu2
+{
+    visibility: visible;
+    opacity: 1;
+    height: 275px;
+}
+
+.mob-parent{display: none;}
+
+@media(max-width:1024px)
+{
+
+ .menu
+{
+    gap: 0px;
+    justify-content: space-evenly;
+    padding: 0 15px;
+}
+
+
+ .menu a
+{
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.sub-menu a, .sub-menu2 a 
+{
+    font-size: 15px;
+    letter-spacing: 0px;
+}
+
+.drop-down:hover .sub-menu
+{
+    height: 148px;
+}
+
+.drop-down2:hover .sub-menu2
+{
+    height: 248px;
+}
+
+}
+
+@media(max-width:768px)
+{
+    .menu{display: none;}
+
+    .mob-parent
+    {
+        display: flex;
+        justify-content: flex-end;
+        background-color: rgb(5, 0, 6);
+        padding: 10px 20px 12px;
+    }
+    .mob-menu
+   {
+        width: 0;
+        overflow-x: hidden;
+        position: fixed;
+        top:0px;
+        right: 0;
+        background-color: #1a1717;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 150px;
+        z-index: 200;
+        transition: .5s;
+        height: 100vh;}
+            
+    .mob-menu a
+    {
+        text-decoration: none;
+        color: white;
+        font-size: 22px;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+
+    .mob-menu .drop-down > a, .mob-menu .drop-down2 > a 
+    {
+        display: flex;
+        margin-bottom: 20px;
+        font-size: 18px;
+        padding-left: 40px;
+        font-size: 22px;
+    }
+            
+    .mob-menu .msub-menu, .mob-menu .msub-menu2
+    {
+        display: flex;
+        flex-direction: column;
+        height: 0px;
+        transition: .3s;
+        overflow-y: hidden;
+    }
+
+    .mob-menu .msub-menu a, .mob-menu .msub-menu2 a
+    {
+        padding-left: 60px;
+        font-size: 20px;
+    }
+    
+    .arrow-down, .arrow-down2
+    {
+        position: absolute;
+        top: 2px;
+        right: 36px;
+        border: solid rgb(255, 255, 255);
+        border-width: 0 2px 2px 0;
+        display: inline-block;
+        padding: 4px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transition: .1s;
+        cursor: pointer;
+        user-select: none;
+    }
+    
+    .arrow-up, .arrow-up2
+    {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        top: 5px;
+    }
+    
+    .closebtn
+    {
+        position: absolute;
+        top: 25px;
+        right: 36px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .sm-bar
+    {
+        font-size: 40px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+    }
+}
